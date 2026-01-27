@@ -1,25 +1,12 @@
 import TransactionItem from "./TransactionItem";
 
-export default function DayGroup({ day }) {
+export default function DayGroup({ date, transactions }) {
   return (
     <div className="mb-4">
-      {/* Date header */}
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-sm font-semibold text-gray-700">
-          {day.date}
-        </span>
-        <span
-          className={`text-sm font-medium ${
-            day.total < 0 ? "text-red-500" : "text-green-600"
-          }`}
-        >
-          ₹{Math.abs(day.total)}
-        </span>
-      </div>
+      <h3 className="text-sm text-gray-500 mb-2">{date}</h3>
 
-      {/* Transactions */}
-      <div className="bg-white rounded-xl shadow-sm divide-y">
-        {day.transactions.map((tx) => (
+      <div className="space-y-2">
+        {transactions.map((tx) => (
           <TransactionItem key={tx.id} tx={tx} />
         ))}
       </div>

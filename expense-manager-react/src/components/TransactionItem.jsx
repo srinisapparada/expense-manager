@@ -1,18 +1,21 @@
 export default function TransactionItem({ tx }) {
   return (
-    <div className="flex justify-between items-center px-4 py-3">
+    <div className="flex justify-between bg-white p-3 rounded shadow">
       <div>
-        <p className="text-sm font-medium">{tx.title}</p>
+        <p className="font-medium">{tx.title}</p>
         <p className="text-xs text-gray-400">{tx.category}</p>
       </div>
 
       <p
-        className={`text-sm font-semibold ${
-          tx.amount < 0 ? "text-red-500" : "text-green-600"
+        className={`font-semibold ${
+          tx.type === "expense"
+            ? "text-red-500"
+            : "text-green-500"
         }`}
       >
-        {tx.amount < 0 ? "-" : "+"}₹{Math.abs(tx.amount)}
+        {tx.type === "expense" ? "-" : "+"}₹{tx.amount}
       </p>
     </div>
   );
 }
+
