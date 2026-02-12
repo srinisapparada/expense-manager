@@ -30,6 +30,24 @@ function autoCategory(desc) {
   if (desc.includes("hospital") || desc.includes("doctor") || 
       desc.includes("Medicine"))
     return "Medical";
+  if (desc.includes("movie") || desc.includes("netflix") ||
+      desc.includes("amazon prime") || desc.includes("spotify"))
+    return "Entertainment";
+  if (desc.includes("gym") || desc.includes("fitness") ||
+      desc.includes("yoga") || desc.includes("health"))
+    return "Health and Fitness";
+  if (desc.includes("salon") || desc.includes("spa") ||
+      desc.includes("personal care") || desc.includes("grooming"))
+    return "Personal Care";
+  if (desc.includes("course") || desc.includes("tuition") ||
+      desc.includes("books") || desc.includes("education"))
+    return "Education";
+  if (desc.includes("shirt") || desc.includes("pants") ||
+      desc.includes("clothes") || desc.includes("shoes"))
+    return "Clothing";
+  if (desc.includes("gift") || desc.includes("donation") ||
+      desc.includes("charity") || desc.includes("present"))
+    return "Gifts and Donations";
 
   return "Others";
 }
