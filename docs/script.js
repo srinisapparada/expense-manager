@@ -12,7 +12,8 @@ function autoCategory(desc) {
   console.log("DESC TYPE:", typeof desc, desc);
   desc = desc.toLowerCase();
 
-  if (desc.includes("electric") || desc.includes("bill")||
+  if (desc.includes("electric") || desc.includes("bescom") || 
+      desc.includes("bill") || desc.includes("bwssb") ||
       desc.includes("water") || desc.includes("Gas") || 
       desc.includes("Internet"))
     return "Utilities";
@@ -48,6 +49,9 @@ function autoCategory(desc) {
   if (desc.includes("gift") || desc.includes("donation") ||
       desc.includes("charity") || desc.includes("present"))
     return "Gifts and Donations";
+  if (desc.includes("BrekFast") || desc.includes("Lunch") ||
+      desc.includes("Dinner") || desc.includes("Snacks"))
+    return "Dining Out";
 
   return "Others";
 }
