@@ -49,8 +49,8 @@ function autoCategory(desc) {
   if (desc.includes("gift") || desc.includes("donation") ||
       desc.includes("charity") || desc.includes("present"))
     return "Gifts and Donations";
-  if (desc.includes("BrekFast") || desc.includes("Lunch") ||
-      desc.includes("Dinner") || desc.includes("Snacks"))
+  if (desc.includes("breakfast") || desc.includes("lunch") ||
+      desc.includes("dinner") || desc.includes("snacks"))
     return "Dining Out";
 
   return "Others";
